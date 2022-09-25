@@ -101,7 +101,6 @@ def main():
             result = is_connected(img_path0, img_path1, matching,  args)
             if result[-1] > args.n_matches_threshold:
                 results.append(result)
-        break
 
     with open('results.json', 'w') as f:
         json.dump(results, f, indent=2)
